@@ -34,7 +34,7 @@ variable "ingress_service_list" {
 variable "family_inet_block" {
     description = "JSON block for inet definition"
     type = string
-    default = "dhcp {}"
+    default = "address { cidr_ip = 192.168.32.1/24 }"
 }
 
 variable "sec_zone" {

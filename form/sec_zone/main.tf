@@ -24,9 +24,6 @@ resource "junos_interface_logical" "interface" {
     name            = var.interface_name
     description     = var.interface_description
     security_zone   = junos_security_zone.sec_zone.name
-    family_inet {
-        dhcp { 
-            } 
-    }
+    family_inet { var.family_inet_block }
 }
 
